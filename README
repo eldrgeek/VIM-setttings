@@ -1,0 +1,11 @@
+Installation:
+    git clone git://github.com/EmbeddedMike/VIM-setttings.git ~/.vim
+
+Create symlinks, or a .vimrc file that source vmrc from within .vim
+Either 
+    ln -s ~/.vim/vimrc ~/.vimrc
+OR
+    #.vmrc contents
+    source ~/.vim/vimrc
+
+Similarly for .gvimrc if needed
