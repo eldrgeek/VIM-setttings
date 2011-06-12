@@ -49,3 +49,6 @@
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = git://github.com/tsaleh/vim-tcomment.git
+[submodule "bundle/ruby"]
+	path = bundle/ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
