@@ -19,7 +19,7 @@ noremap S :highlight Normal guibg=#f8fab4<cr>S
 noremap A :highlight Normal guibg=#f8fab4<cr>A
 
 "You need the next line to change the color back when you hit escape.
-noremap <Esc> <Esc>:highlight Normal guibg=#CBF2C7<cr>
+inoremap <Esc> <Esc>:highlight Normal guibg=#CBF2C7<cr>
 
 "Note: the color "Sys_Window" works for Windows only. 
 "If running linux, use white or lightgrey instead.
