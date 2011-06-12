@@ -40,3 +40,6 @@
 [submodule "bundle/align"]
 	path = bundle/align
 	url = git://github.com/tsaleh/vim-align.git
+[submodule "bundle/shoulda"]
+	path = bundle/shoulda
+	url = git://github.com/tsaleh/vim-shoulda.git
