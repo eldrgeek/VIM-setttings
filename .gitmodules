@@ -43,3 +43,6 @@
 [submodule "bundle/shoulda"]
 	path = bundle/shoulda
 	url = git://github.com/tsaleh/vim-shoulda.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/tsaleh/vim-supertab.git
