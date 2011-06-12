@@ -36,7 +36,7 @@ bundles_dir = File.join(File.dirname(__FILE__), "bundle")
 
 install = true 
 
-if true 
+if false 
         FileUtils.cd(bundles_dir)
 	puts "Trashing everything (lookout!)"
 	Dir["*"].each {|d| FileUtils.rm_rf d }
