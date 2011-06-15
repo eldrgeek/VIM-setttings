@@ -8,11 +8,13 @@ call pathogen#runtime_append_all_bundles()
  set visualbell
  set guifont=Courier_New:h9:cANSI 
 highlight Normal guibg=#CBF2C7
-
+highlight LineNr guibg=lightgray guifg=black
 noremap i :highlight Normal guibg=#f8fab4<cr>i
+vunmap i
 noremap o :highlight Normal guibg=#f8fab4<cr>o
 noremap s :highlight Normal guibg=#f8fab4<cr>s
 noremap a :highlight Normal guibg=#f8fab4<cr>a
+vunmap a
 noremap I :highlight Normal guibg=#f8fab4<cr>I
 noremap O :highlight Normal guibg=#f8fab4<cr>O
 noremap S :highlight Normal guibg=#f8fab4<cr>S
@@ -74,4 +76,8 @@ inoremap <silent> <C-Up> <C-o>:<C-u>call MoveLineUp()<CR>
 inoremap <silent> <C-Down> <C-o>:<C-u>call MoveLineDown()<CR>
 vnoremap <silent> <C-Up> :<C-u>call MoveVisualUp()<CR>
 vnoremap <silent> <C-Down> :<C-u>call MoveVisualDown()<CR>
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
 
