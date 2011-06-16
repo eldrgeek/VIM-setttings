@@ -7,21 +7,21 @@ call pathogen#runtime_append_all_bundles()
  syntax on
  set visualbell
  set guifont=Courier_New:h9:cANSI 
-highlight Normal guibg=#CBF2C7
+"highlight Normal guibg=#CBF2C7
 highlight LineNr guibg=lightgray guifg=black
-noremap i :highlight Normal guibg=#f8fab4<cr>i
-vunmap i
-noremap o :highlight Normal guibg=#f8fab4<cr>o
-noremap s :highlight Normal guibg=#f8fab4<cr>s
-noremap a :highlight Normal guibg=#f8fab4<cr>a
-vunmap a
-noremap I :highlight Normal guibg=#f8fab4<cr>I
-noremap O :highlight Normal guibg=#f8fab4<cr>O
-noremap S :highlight Normal guibg=#f8fab4<cr>S
-noremap A :highlight Normal guibg=#f8fab4<cr>A
+"noremap i :highlight Normal guibg=#f8fab4<cr>i
+"vunmap i
+"noremap o :highlight Normal guibg=#f8fab4<cr>o
+"noremap s :highlight Normal guibg=#f8fab4<cr>s
+"noremap a :highlight Normal guibg=#f8fab4<cr>a
+"vunmap a
+"noremap I :highlight Normal guibg=#f8fab4<cr>I
+"noremap O :highlight Normal guibg=#f8fab4<cr>O
+"noremap S :highlight Normal guibg=#f8fab4<cr>S
+"noremap A :highlight Normal guibg=#f8fab4<cr>A
 
 "You need the next line to change the color back when you hit escape.
-inoremap <Esc> <Esc>:highlight Normal guibg=#CBF2C7<cr>
+"inoremap <Esc> <Esc>:highlight Normal guibg=#CBF2C7<cr>
 
 "Note: the color "Sys_Window" works for Windows only. 
 "If running linux, use white or lightgrey instead.
@@ -80,4 +80,12 @@ autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+"Adjustment becuase I'm slow typing leader codes...
+:set timeoutlen=2002 
+
+augroup hilite
+:    au!
+:    au InsertLeave * exe "highlight Normal guibg=#f8fab4"
+:    au InsertEnter * exe "highlight Normal guibg=#CBF2C7"
+augroup END
 
