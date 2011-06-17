@@ -1,13 +1,20 @@
 set rtp+=~/.vim "Put .vim on path so Windows same as Linux
-source ~/.vim/autoload/pathogen.vim
-call pathogen#runtime_append_all_bundles()
- call pathogen#helptags()
- set number
+
+"Lines that follow removed to install  tplugin
+"source ~/.vim/autoload/pathogen.vim
+"call pathogen#runtime_append_all_bundles()
+" call pathogen#helptags()
+ 
+"now source tplugin
+source ~/.vim/bundle/tplugin_vim/macros/tplugin.vim
+
+set number
  filetype plugin indent on
  syntax on
  set visualbell
  set guifont=Courier_New:h9:cANSI 
 highlight Normal guibg=#CBF2C7
+
 highlight LineNr guibg=lightgray guifg=black
 "noremap i :highlight Normal guibg=#f8fab4<cr>i
 "vunmap i
@@ -90,4 +97,7 @@ vnoremap <silent> <C-c>  "+y
 "Finally got the colors to work the way I wanted
 augroup hilite
 :    au!
+:    au InsertEnter * exe "highlight Normal guibg=#f8fab4"
+:    au InsertLeave * exe "highlight Normal guibg=#CBF2C7"
+augroup END
 
