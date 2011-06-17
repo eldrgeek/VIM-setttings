@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 # taken from: http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+#added tplugin
 git_bundles = [ 
   "git://github.com/astashov/vim-ruby-debugger.git",
   "git://github.com/msanders/snipmate.vim.git",
@@ -20,8 +21,9 @@ git_bundles = [
   "git://github.com/tsaleh/vim-tcomment.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/ecomba/vim-ruby-refactoring.git",
-  "git://github.com/tomtom/tplugin_vim.git"
+  "git://github.com/tomtom/tplugin_vim.git" 
 ]
+
 
 vim_org_scripts = [
   ["IndexedSearch", "7062",  "plugin"],
