@@ -1,4 +1,4 @@
-set rtp+=~/.vim
+set rtp+=~/.vim "Put .vim on path so Windows same as Linux
 source ~/.vim/autoload/pathogen.vim
 call pathogen#runtime_append_all_bundles()
  call pathogen#helptags()
@@ -7,7 +7,7 @@ call pathogen#runtime_append_all_bundles()
  syntax on
  set visualbell
  set guifont=Courier_New:h9:cANSI 
-"highlight Normal guibg=#CBF2C7
+highlight Normal guibg=#CBF2C7
 highlight LineNr guibg=lightgray guifg=black
 "noremap i :highlight Normal guibg=#f8fab4<cr>i
 "vunmap i
@@ -83,9 +83,11 @@ autocmd BufReadPost *
 "Adjustment becuase I'm slow typing leader codes...
 :set timeoutlen=2002 
 
+nnoremap <silent> <C-a>  maggVG"+y`a
+vnoremap <silent> <C-c>  "+y
+"vnoremap <silent> <C-v>  "+p
+
+"Finally got the colors to work the way I wanted
 augroup hilite
 :    au!
-:    au InsertLeave * exe "highlight Normal guibg=#f8fab4"
-:    au InsertEnter * exe "highlight Normal guibg=#CBF2C7"
-augroup END
 
