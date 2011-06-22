@@ -7,6 +7,7 @@ set rtp+=~/.vim "Put .vim on path so Windows same as Linux
  
 "now source tplugin
 source ~/.vim/bundle/tplugin_vim/macros/tplugin.vim
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 set number
  filetype plugin indent on
