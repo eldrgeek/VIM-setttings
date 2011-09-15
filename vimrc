@@ -120,7 +120,7 @@ map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
  
 " Change which file opens after executing :Rails command
-let g:rails_default_file='config/database.yml'
+"" Removed by MW let g:rails_default_file='config/database.yml'
  
 syntax enable
 set cf  " Enable error files & error jumping.
@@ -159,4 +159,27 @@ set laststatus=2  " Always show status line.
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+set hlsearch
+"Make sure MRU is initialized by starting, then closing it"
+MRU
+q
+set history=700
 
+" Fast editing of the .vimrc
+map <leader>e :e! ~/.vim/vimrc<cr>
+
+" When vimrc is edited, reload it
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
+"Turn on the wildmenu for command completion"
+set wildmenu
+
+"Ignore case when searching, except when a capital lettter in string"
+set ignorecase
+set smartcase
+"Research http://amix.dk/vim/vimrc.html for more hacks"
+
+"Enable Ctrl-V and Ctrol-C cut and paste keys"
+map <C-V> "+gP
+cmap <C-V> <C-R>+
+vnoremap <C-C> "+y
+"research :http://www.slackorama.com/projects/vim/vimrc.html "
