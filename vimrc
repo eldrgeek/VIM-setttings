@@ -183,3 +183,4 @@ map <C-V> "+gP
 cmap <C-V> <C-R>+
 vnoremap <C-C> "+y
 "research :http://www.slackorama.com/projects/vim/vimrc.html "
+"From Dell
