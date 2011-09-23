@@ -4,7 +4,7 @@ set rtp+=~/.vim "Put .vim on path so Windows same as Linux
 "source ~/.vim/autoload/pathogen.vim
 "call pathogen#runtime_append_all_bundles()
 " call pathogen#helptags()
- 
+
 "now source tplugin
 source ~/.vim/bundle/tplugin_vim/macros/tplugin.vim
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
@@ -13,8 +13,8 @@ set number
  filetype plugin indent on
  syntax on
  set visualbell
-" DOES NOT WORK ON LINUX set guifont=Courier_New:h9:cANSI 
-highlight Normal guibg=#EBFFE0
+ set guifont=Courier_New:h9:cANSI 
+highlight Normal guibg=#CBF2C7
 
 highlight LineNr guibg=lightgray guifg=black
 "noremap i :highlight Normal guibg=#f8fab4<cr>i
@@ -99,7 +99,7 @@ vnoremap <silent> <C-c>  "+y
 augroup hilite
 :    au!
 :    au InsertEnter * exe "highlight Normal guibg=#f8fab4"
-:    au InsertLeave * exe "highlight Normal guibg=#EBFFE0"
+:    au InsertLeave * exe "highlight Normal guibg=#CBF2C7"
 augroup END
 
 "Changes from http://biodegradablegeek.com/2007/12/using-vim-as-a-complete-ruby-on-rails-ide/
@@ -120,7 +120,7 @@ map <silent> <m-p> :cp <cr>
 map <silent> <m-n> :cn <cr>
  
 " Change which file opens after executing :Rails command
-let g:rails_default_file='config/database.yml'
+"" Removed by MW let g:rails_default_file='config/database.yml'
  
 syntax enable
 set cf  " Enable error files & error jumping.
@@ -159,4 +159,28 @@ set laststatus=2  " Always show status line.
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+set hlsearch
+"Make sure MRU is initialized by starting, then closing it"
+MRU
+q
+set history=700
 
+" Fast editing of the .vimrc
+map <leader>e :e! ~/.vim/vimrc<cr>
+
+" When vimrc is edited, reload it
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
+"Turn on the wildmenu for command completion"
+set wildmenu
+
+"Ignore case when searching, except when a capital lettter in string"
+set ignorecase
+set smartcase
+"Research http://amix.dk/vim/vimrc.html for more hacks"
+
+"Enable Ctrl-V and Ctrol-C cut and paste keys"
+map <C-V> "+gP
+cmap <C-V> <C-R>+
+vnoremap <C-C> "+y
+"research :http://www.slackorama.com/projects/vim/vimrc.html "
+"From Dell
