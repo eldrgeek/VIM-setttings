@@ -13,8 +13,8 @@ set number
  filetype plugin indent on
  syntax on
  set visualbell
- set guifont=Courier_New:h9:cANSI 
-highlight Normal guibg=#CBF2C7
+" DOES NOT WORK ON LINUX set guifont=Courier_New:h9:cANSI 
+highlight Normal guibg=#EBFFE0
 
 highlight LineNr guibg=lightgray guifg=black
 "noremap i :highlight Normal guibg=#f8fab4<cr>i
@@ -99,7 +99,7 @@ vnoremap <silent> <C-c>  "+y
 augroup hilite
 :    au!
 :    au InsertEnter * exe "highlight Normal guibg=#f8fab4"
-:    au InsertLeave * exe "highlight Normal guibg=#CBF2C7"
+:    au InsertLeave * exe "highlight Normal guibg=#EBFFE0"
 augroup END
 
 "Changes from http://biodegradablegeek.com/2007/12/using-vim-as-a-complete-ruby-on-rails-ide/
