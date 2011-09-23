@@ -13,7 +13,8 @@ set number
  filetype plugin indent on
  syntax on
  set visualbell
- set guifont=Courier_New:h9:cANSI 
+ "Linux does not like this font
+ " set guifont=Courier_New:h9:cANSI 
 highlight Normal guibg=#CBF2C7
 
 highlight LineNr guibg=lightgray guifg=black
